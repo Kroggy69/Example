@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    width: 1300px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: black;
+}
+
+.logo h1 span {
+    color: rgb(255, 145, 0);
+}
+
+.nav-menu ul{
+    display: flex;
+}
+
+.nav-item {
+    list-style-type: none;
+    padding: 10px 0 0 40px;
+    position: relative;
+    display: flex;
+}
+.nav-item .nav-link {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+}
+
+.dropdown {
+    width: 200px;
+    position: absolute;
+    top: 27px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.dropdown ul {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+}
+
+.dropdown ul .dropdown-item {
+    list-style-type: none;
+    position: relative;
+}
+
+.dropdown ul .dropdown-item .dropdown-link span {
+    float: right;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.dropdown ul .dropdown-item .dropdown-link {
+    padding: 20px 20px;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu ul .nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    top: 38px;
+}
+
+
+.deep-dropdown {
+    width: 200px;
+    position: absolute;
+    left: 80%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.dropdown-item:hover .deep-dropdown {
+    opacity: 1;
+    visibility: visible;
+    left: 100%;
+}
